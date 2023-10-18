@@ -40,7 +40,6 @@ const verificationTokenCtrl = async (req, res) => {
 
 const loginUserCtrl = async (req, res) => {
   const { email, password } = req.body;
-
   const user = await User.findOne({ email });
   if (!user) throw HttpError(401);
 
